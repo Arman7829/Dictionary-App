@@ -1,0 +1,71 @@
+const url = "https://api.dictionaryapi.dev/api/v2/entries/en/"; 
+1. const url = "https://api.dictionaryapi.dev/api/v2/entries/en/";: Defines a constant url that holds 
+the base URL for the dictionary API. 
+const result = document.getElementById("result"); 
+const sound = document.getElementById("sound"); 
+const btn = document.getElementById("search-btn"); 
+2. const result = document.getElementById("result");: Retrieves the HTML element with the ID 
+result and stores it in the result variable. 
+3. const sound = document.getElementById("sound");: Retrieves the HTML audio element with the 
+ID sound and stores it in the sound variable. 
+4. const btn = document.getElementById("search-btn");: Retrieves the HTML button element with 
+the ID search-btn and stores it in the btn variable. 
+btn.addEventListener("click", () => { 
+let inpWord = document.getElementById("inp-word").value;
+5. btn.addEventListener("click", () => {: Adds an event listener to the btn that triggers when the 
+button is clicked. 
+6. let inpWord = document.getElementById("inp-word").value;: Retrieves the value entered in the 
+input field with the ID inp-word and stores it in the inpWord variable. 
+    fetch(`${url}${inpWord}`) 
+    .then((response) => response.json()) 
+7. fetch(${url}${inpWord}) 
+o Sends a GET request to the dictionary API using the base URL combined with the word entered by 
+the user. 
+8. .then((response) => response.json()) 
+o Converts the response from the API to JSON format. 
+    .then((data) => { 
+        console.log(data); 
+        result.innerHTML = ` 
+        <div class="word"> 
+            <h3>${inpWord}</h3> 
+            <button onclick="playSound()"> 
+                <i class="fas fa-volume-up"></i> 
+            </button> 
+        </div> 
+        <div class="details"> 
+            <p>${data[0].meanings[0].partOfSpeech}</p> 
+            <p>/${data[0].phonetic}/</p> 
+        </div> 
+        <p class="word-meaning"> 
+            ${data[0].meanings[0].definitions[0].definition} 
+        </p> 
+        <p class="word-example"> 
+            ${data[0].meanings[0].definitions[0].example || ""} 
+        </p>`; 
+9. .then((data) => {: Handles the JSON data returned by the API. 
+10. console.log(data);: Logs the data to the console for debugging purposes. 
+11. result.innerHTML = ...` : Updates the inner HTML of the result element to display the fetched 
+word's information:
+ <div class="word">: Contains the word and a button to play the pronunciation sound. 
+ <h3>${inpWord}</h3>: Displays the word. 
+ <button onclick="playSound()">: Adds a button with an onclick event to play the pronunciation. 
+ <i class="fas fa-volume-up"></i>: Displays a volume icon. 
+ <div class="details">: Contains the part of speech and phonetic spelling. 
+ <p>${data[0].meanings[0].partOfSpeech}</p>: Displays the part of speech. 
+ <p>/${data[0].phonetic}/</p>: Displays the phonetic spelling. 
+ <p class="word-meaning">: Displays the word's definition. 
+ <p class="word-example">: Displays an example sentence, if available. 
+sound.setAttribute("src", `${data[0].phonetics[0].audio}`); 
+}) 
+12. sound.setAttribute("src", ${data[0].phonetics[0].audio});: Sets the src attribute of the sound 
+element to the URL of the audio file for the pronunciation. 
+.catch(() => { 
+result.innerHTML = `<h3 class="error">Couldn't Find The Word</h3>`; 
+}); 
+13. .catch(() => { result.innerHTML = <h3 class="error">Couldn't Find The Word</h3>; });: 
+Handles errors by displaying an error message if the API request fails or the word is not found. 
+function playSound() { 
+sound.play(); 
+} 
+14. function playSound() { sound.play(); }: Defines the playSound function to play the audio when 
+called. This function is triggered by the button click.
