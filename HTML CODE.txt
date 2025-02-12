@@ -1,0 +1,38 @@
+<!DOCTYPE html>: Declares the document type and version of HTML. This is HTML5. 
+<html lang="en">: Starts the HTML document and sets the language to English. 
+<head>: Starts the head section of the HTML document. 
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />: Sets the viewport to 
+scale for responsive design. Ensures proper rendering and touch zooming on mobile devices. 
+<!-- Font Awesome -->: Comment indicating the inclusion of Font Awesome for icons. 
+<linkrel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font
+awesome/5.15.4/css/all.min.css" />: Links to the Font Awesome stylesheet for using icons. 
+<!-- Google Fonts -->: Comment indicating the inclusion of Google Fonts. 
+<linkhref="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />: 
+Links to the Google Fonts stylesheet for using the Poppins font. 
+<!-- Stylesheet -->: Comment indicating the inclusion of the custom stylesheet. 
+<link rel="stylesheet" href="style.css" />: Links to the custom stylesheet (style.css) for additional 
+styling. 
+<title>Dictionary</title>: Sets the title of the HTML document to "Dictionary," which appears on 
+the browser tab. 
+</head>: Ends the head section. 
+<body>: Starts the body section of the HTML document, which contains the content displayed on 
+the web page. 
+<audio id="sound"></audio>: Declares an <audio> element with an ID of "sound" (potentially for 
+playing sound effects). 
+<div class="container">: Starts a div element with a class of "container," likely for layout and styling 
+purposes. 
+<div class="search-box">: Starts a div element with a class of "search-box," which likely contains 
+the search input and button. 
+<input type="text" placeholder="Type the word here.." id="inp-word" />: Defines an input field for 
+entering the word to search, with a placeholder text and an ID of "inp-word."
+<button id="search-btn">Search</button>: Defines a button to trigger the search action, with an ID 
+of "search-btn." 
+</div>: Ends the search-box div. 
+<div class="result" id="result"></div>: Defines a div element with a class of "result" and an ID of 
+"result" to display the search results. 
+</div>: Ends the container div. 
+<!-- Script -->: Comment indicating the inclusion of the JavaScript file. 
+<script src="script.js"></script>: Links to the external JavaScript file (script.js) that contains the 
+script logic for the application. 
+</body>: Ends the body section. 
+</html>: Ends the HTML document.
