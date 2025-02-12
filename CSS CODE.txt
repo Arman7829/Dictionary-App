@@ -1,0 +1,161 @@
+* { 
+padding: 0; 
+margin: 0; 
+box-sizing: border-box; 
+} 
+1. * { padding: 0; margin: 0; box-sizing: border-box; }: Applies a zero padding and margin to all 
+elements and sets box-sizing to border-box for all elements. This ensures that padding and border are 
+included in the element's total width and height. 
+*:not(i) { 
+font-family: "Poppins", sans-serif; 
+} 
+2. *:not(i) { font-family: "Poppins", sans-serif; }: Applies the "Poppins" font to all elements except 
+for <i> elements. 
+body { 
+background-color: #ae9cff; 
+} 
+3. body { background-color: #ae9cff; }: Sets the background color of the body to a light purple 
+(#ae9cff). 
+.container { 
+background-color: #ffffff;  
+width: 90vmin;
+  position: absolute; 
+    transform: translate(-50%, -50%); 
+    top: 50%; 
+    left: 50%; 
+    padding: 80px 50px;  
+    border-radius: 10px; 
+    box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2); 
+} 
+4. .container { ... }: Sets styles for the container class: 
+ background-color: #ffffff;: White background color. 
+ width: 90vmin;: Width is 90% of the viewport's minimum dimension. 
+ position: absolute;: Absolutely positions the element. 
+ transform: translate(-50%, -50%);: Centers the element both horizontally and vertically. 
+ top: 50%; left: 50%;: Positions the top-left corner at 50% from the top and left of the viewport. 
+ padding: 80px 50px;: Adds padding inside the container. 
+ border-radius: 10px;: Rounds the corners with a 10px radius. 
+ box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);: Adds a shadow with a certain blur and spread. 
+.search-box { 
+    width: 100%;  
+    display: flex; 
+    justify-content: space-between; 
+} 
+5. .search-box { ... } 
+Styles for the search-box class: 
+ width: 100%;: Full width. 
+ display: flex;: Uses Flexbox layout. 
+ justify-content: space-between;: Distributes space between items. 
+.search-box input { 
+    padding: 5px;  
+    width: 70%;  
+    border: none; 
+outline: none; 
+border-bottom: 3px solid #ae9cff;  
+font-size: 16px; 
+} 
+6. .search-box input { ... } 
+Styles for the input inside .search-box: 
+ padding: 5px;: Adds padding inside the input. 
+ width: 70%;: Sets the width to 70% of its parent. 
+ border: none;: Removes borders. 
+ outline: none;: Removes the outline. 
+ border-bottom: 3px solid #ae9cff;: Adds a solid bottom border with the color #ae9cff. 
+ font-size: 16px;: Sets the font size to 16px. 
+.search-box button { 
+padding: 15px 0; 
+width: 25%; 
+background-color: #ae9cff;  
+border: none; 
+outline: none;  
+color: #ffffff;  
+border-radius: 5px; 
+} 
+7. .search-box button { ... } 
+Styles for the button inside .search-box: 
+ padding: 15px 0;: Adds vertical padding. 
+ width: 25%;: Sets the width to 25% of its parent. 
+ background-color: #ae9cff;: Sets the background color to #ae9cff. 
+ border: none;: Removes borders. 
+ outline: none;: Removes the outline. 
+ color: #ffffff;: Sets the text color to white. 
+ border-radius: 5px;: Rounds the corners with a 5px radius.
+.result { 
+position: relative; 
+} 
+8. .result { position: relative; } 
+Sets the result class to have a relative position, which allows for absolute positioning of child 
+elements relative to it. 
+.result h3 { 
+font-size: 30px;  
+color: #1f194c; 
+} 
+9. .result h3 { ... } 
+Styles for h3 elements inside .result: 
+ font-size: 30px;: Sets the font size to 30px. 
+ color: #1f194c;: Sets the text color to a dark blue (#1f194c). 
+.result .word {  
+display: flex;  
+justify-content: space-between;  
+margin-top: 80px; 
+} 
+10. .result .word { ... } 
+Styles for elements with the class word inside .result: 
+ display: flex;: Uses Flexbox layout. 
+ justify-content: space-between;: Distributes space between items. 
+ margin-top: 80px;: Adds a top margin of 80px. 
+.result button { 
+background-color: transparent;  
+color: #ae9cff; 
+border: none;  
+outline: none;  
+font-size: 18px; 
+} 
+11. .result button { ... }
+Styles for button elements inside .result: 
+ background-color: transparent;: Makes the background transparent. 
+ color: #ae9cff;: Sets the text color to #ae9cff. 
+ border: none;: Removes borders. 
+ outline: none;: Removes the outline. 
+ font-size: 18px;: Sets the font size to 18px. 
+.result .details {  
+display: flex;  
+gap: 10px;  
+color: #b3b6d4; 
+margin: 5px 0 20px 0;  
+font-size: 14px; 
+} 
+12. .result .details { ... } 
+Styles for elements with the class details inside .result: 
+ display: flex;: Uses Flexbox layout. 
+ gap: 10px;: Adds a gap of 10px between items. 
+ color: #b3b6d4;: Sets the text color to a light grayish-blue (#b3b6d4). 
+ margin: 5px 0 20px 0;: Adds vertical margins of 5px on top and 20px on bottom. 
+ font-size: 14px;: Sets the font size to 14px. 
+.word-meaning {  
+color: #575a7b; 
+} 
+13. .word-meaning { color: #575a7b; } 
+Sets the text color of elements with the class word-meaning to a grayish-blue (#575a7b). 
+.word-example {  
+color: #575a7b;  
+font-style: italic; 
+border-left: 5px solid #ae9cff;  
+padding-left: 20px; 
+margin-top: 30px;
+} 
+14. .word-example { ... } 
+Styles for elements with the class word-example: 
+ color: #575a7b;: Sets the text color to #575a7b. 
+ font-style: italic;: Makes the text italic. 
+ border-left: 5px solid #ae9cff;: Adds a solid left border with color #ae9cff. 
+ padding-left: 20px;: Adds padding of 20px to the left. 
+ margin-top: 30px;: Adds a top margin of 30px. 
+.error { 
+margin-top: 80px;  
+text-align: center; 
+} 
+15. .error { ... } 
+Styles for elements with the class error: 
+ margin-top: 80px;: Adds a top margin of 80px. 
+ text-align: center;: Centers the text alignment.
